@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Rohit Misra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rohit Misra">
+    <style>
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #button.centered {
+            position: relative;
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -42%);
+        }
+
+        #button {
+            background-color: white;
+            color: black;
+            border: 2px solid limegreen;
+            padding: 20px 40px;
+            text-align: center;
+            display: inline-block;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        #button:hover {
+            background-color: limegreen;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="centered">
+        <p id="type"></p>
+    </div>
+    <div class="centered" id="button" style="font-size: 32px; font-family: courier; text-decoration-color: limegreen">Welcome!</div>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#button').hide().delay(4500).fadeIn(9200);
+        });
+
+    </script>
+    <script>
+        var i = 1;
+
+        function type() {
+            var message = "Hello World....";
+            if (i <= message.length) {
+                var text = message.substring(0, i);
+                document.getElementById("type").innerHTML = text;
+                document.getElementById("type").style.color = "LIME";
+                document.getElementById("type").style.fontFamily = "Courier";
+                document.getElementById("type").style.fontSize = "80";
+                setTimeout("type()", 222);
+                i++;
+            }
+        };
+        type();
+
+    </script>
+</body>
+
+</html>

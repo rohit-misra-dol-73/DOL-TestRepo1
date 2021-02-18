@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>Rohit Misra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rohit Misra">
+    <link rel="stylesheet" href="W3.css">
+    <script>
+        var i = 1;
+
+        function type() {
+            var message = "Hello World!";
+            if (i <= message.length) {
+                var text = message.substring(0,i);
+                document.getElementById("type").innerHTML = text;
+                setTimeout("type()",2);
+                i++;
+            }
+        };
+        type();
+
+    </script>
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        p {
+            text-decoration-color: lime;
+            text-align: center;
+        }
+
+        .homeimg {
+            background-image: url(Images/BG1.jpg);
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #hoverside a {
+            position: absolute;
+            width: 250px;
+            left: -210px;
+            padding: 20px;
+            transition: 0.5s;
+            text-decoration: none;
+            font-size: 30px;
+            color: white;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        #hoverside a:hover {
+            left: 5px;
+        }
+
+        #home {
+            top: 50px;
+            background-color: dimgray;
+        }
+
+        #about {
+            top: 140px;
+            background-color: dimgray;
+        }
+
+        #education {
+            top: 230px;
+            background-color: dimgray;
+        }
+
+        #trainings {
+            top: 320px;
+            background-color: dimgray;
+        }
+
+        #skills {
+            top: 410px;
+            background-color: dimgray;
+        }
+
+        #miscellaneous {
+            top: 500px;
+            background-color: dimgray;
+        }
+
+        #contact {
+            top: 590px;
+            background-color: dimgray;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .container{
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div id="hoverside" class="sidenav">
+        <a href="#" id="home">Home</a>
+        <a href="#" id="about">About</a>
+        <a href="#" id="education">Education</a>
+        <a href="#" id="trainings">Trainings</a>
+        <a href="#" id="skills">Skills</a>
+        <a href="#" id="miscellaneous">Miscellaneous</a>
+        <a href="#" id="contact">Contact</a>
+    </div>
+    <div class="homeimg" id="home">
+        <div class="centered">
+            <p id="type"></p>
+        </div>
+    </div>
+        </div>
+</body>
+
+</html>

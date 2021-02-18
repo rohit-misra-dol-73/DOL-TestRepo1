@@ -1,0 +1,21 @@
+<?xml-stylesheet href="client.xsl"?>
+<studentdetails>
+<student>
+<name>Rohit Misra</name>
+<roll>67</roll>
+<class>TE5</class>
+</student>
+
+<student>
+<name>Shekhar Jain</name>
+<roll>68</roll>
+<class>TE5</class>
+</student>
+
+<student>
+<name>Mihir Bonde</name>
+<roll>75</roll>
+<class>TE5</class>
+</student>
+
+</studentdetails>
